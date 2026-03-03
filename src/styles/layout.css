@@ -1,0 +1,107 @@
+/* App shell */
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: var(--bg-base);
+}
+
+/* Toolbar */
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+  padding: 0 var(--sp-5);
+  height: 48px;
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border-subtle);
+  flex-shrink: 0;
+  z-index: 10;
+}
+
+.toolbar-brand {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.toolbar-brand-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--text-accent);
+}
+
+.toolbar-sep {
+  flex: 1;
+}
+
+/* Analysis view 3-panel */
+.analysis-layout {
+  display: grid;
+  grid-template-columns: var(--panel-left-width) 1fr var(--panel-right-width);
+  flex: 1;
+  overflow: hidden;
+}
+
+.panel-left,
+.panel-right {
+  background: var(--bg-surface);
+  overflow-y: auto;
+  border-right: 1px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+}
+
+.panel-right {
+  border-right: none;
+  border-left: 1px solid var(--border-subtle);
+}
+
+.panel-center {
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-base);
+}
+
+.panel-section {
+  padding: var(--sp-4);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.panel-section-title {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: var(--sp-3);
+}
+
+/* Blueprint view */
+.blueprint-layout {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+}
+
+.blueprint-controls {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+  padding: var(--sp-3) var(--sp-5);
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border-subtle);
+  flex-shrink: 0;
+}
+
+.blueprint-canvas-wrap {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}

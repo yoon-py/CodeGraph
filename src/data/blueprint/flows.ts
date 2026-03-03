@@ -1,0 +1,67 @@
+import type { FlowPath } from '../../types/blueprint';
+
+export const flowPaths: FlowPath[] = [
+  {
+    id: 'flow-mobile-checkin',
+    name: 'Mobile Check-in Flow',
+    description: 'User submits a check-in from the mobile app to the backend.',
+    nodeIds: ['bp-mobile', 'bp-worker', 'bp-userdb'],
+    edgeIds: ['be-mobile-worker', 'be-worker-userdb'],
+    color: '#4f9cf9',
+  },
+  {
+    id: 'flow-scheduled-alert',
+    name: 'Scheduled Alert Fire Flow',
+    description: 'Cron triggers the worker → AlertProcessor fans out to all notifiers.',
+    nodeIds: [
+      'bp-scheduler',
+      'bp-worker',
+      'bp-alertprocessor',
+      'bp-pushreminder',
+      'bp-emailnotifier',
+      'bp-smsnotifier',
+      'bp-userdb',
+      'bp-eventstore',
+    ],
+    edgeIds: [
+      'be-sched-worker',
+      'be-worker-ap',
+      'be-ap-push',
+      'be-ap-email',
+      'be-ap-sms',
+      'be-ap-userdb',
+      'be-ap-eventstore',
+    ],
+    color: '#f97316',
+  },
+  {
+    id: 'flow-push-delivery',
+    name: 'Push Notification Delivery Flow',
+    description: 'NEW: PushReminder sends Expo push notification to mobile device.',
+    nodeIds: [
+      'bp-alertprocessor',
+      'bp-pushreminder',
+      'bp-expoapi',
+      'bp-mobile',
+      'bp-userdb',
+    ],
+    edgeIds: ['be-ap-push', 'be-push-expo', 'be-expo-mobile', 'be-push-userdb'],
+    color: '#a855f7',
+  },
+  {
+    id: 'flow-email-alert',
+    name: 'Email Alert Flow',
+    description: 'AlertProcessor dispatches email notification via Resend.',
+    nodeIds: ['bp-alertprocessor', 'bp-emailnotifier', 'bp-resend'],
+    edgeIds: ['be-ap-email', 'be-email-resend'],
+    color: '#22c55e',
+  },
+  {
+    id: 'flow-sms-alert',
+    name: 'SMS Alert Flow',
+    description: 'AlertProcessor dispatches SMS notification via Twilio.',
+    nodeIds: ['bp-alertprocessor', 'bp-smsnotifier', 'bp-twilio'],
+    edgeIds: ['be-ap-sms', 'be-sms-twilio'],
+    color: '#eab308',
+  },
+];

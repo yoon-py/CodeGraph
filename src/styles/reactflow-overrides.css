@@ -1,0 +1,85 @@
+/* React Flow dark theme overrides */
+.react-flow {
+  background: var(--bg-base);
+}
+
+.react-flow__background {
+  background: var(--bg-base);
+}
+
+.react-flow__background pattern circle {
+  fill: var(--border-subtle) !important;
+}
+
+.react-flow__controls {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-default);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.react-flow__controls-button {
+  background: var(--bg-elevated);
+  border-color: var(--border-subtle) !important;
+  fill: var(--text-secondary);
+  color: var(--text-secondary);
+}
+
+.react-flow__controls-button:hover {
+  background: var(--bg-hover);
+  fill: var(--text-primary);
+}
+
+.react-flow__minimap {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-default);
+  border-radius: 6px;
+}
+
+.react-flow__minimap-mask {
+  fill: rgba(10, 14, 23, 0.6);
+}
+
+.react-flow__minimap-node {
+  fill: var(--bg-hover);
+  stroke: var(--border-default);
+}
+
+.react-flow__edge-path {
+  stroke-width: 1.5;
+}
+
+.react-flow__edge-textbg {
+  fill: var(--bg-elevated) !important;
+}
+
+.react-flow__edge text {
+  fill: var(--text-muted) !important;
+  font-size: 10px;
+  font-family: var(--font-mono);
+}
+
+.react-flow__attribution {
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 9px;
+}
+
+/* Selected edge */
+.react-flow__edge.selected .react-flow__edge-path {
+  stroke: var(--text-accent) !important;
+}
+
+/* Handle styles */
+.react-flow__handle {
+  width: 8px;
+  height: 8px;
+  background: var(--bg-elevated);
+  border: 1.5px solid var(--border-strong);
+  border-radius: 2px;
+}
+
+.react-flow__handle:hover {
+  background: var(--text-accent);
+  border-color: var(--text-accent);
+}

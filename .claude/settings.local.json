@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node --version && npm --version 2>/dev/null)",
+      "Bash(npm list -g @xyflow/react zustand vite 2>/dev/null | head -20; npm info @xyflow/react version 2>/dev/null; npm info zustand version 2>/dev/null)",
+      "Bash(npm info @xyflow/react dist-tags.latest 2>/dev/null && npm info zustand dist-tags.latest 2>/dev/null)",
+      "Bash(npm install 2>&1 | tail -5)",
+      "Bash(npx tsc --noEmit 2>&1)",
+      "Bash(npm run build 2>&1 | tail -20)",
+      "Bash(npm run build 2>&1 | tail -10)",
+      "Bash(npm run build 2>&1 | tail -8)",
+      "Bash(npm run build 2>&1)"
+    ]
+  }
+}

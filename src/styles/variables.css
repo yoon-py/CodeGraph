@@ -1,0 +1,64 @@
+:root {
+  /* Background layers */
+  --bg-base: #0a0e17;
+  --bg-surface: #111827;
+  --bg-elevated: #1a2235;
+  --bg-hover: #1e2d45;
+  --bg-active: #243352;
+
+  /* Borders */
+  --border-subtle: #1e293b;
+  --border-default: #2d3f5c;
+  --border-strong: #3b5278;
+
+  /* Text */
+  --text-primary: #e2e8f0;
+  --text-secondary: #94a3b8;
+  --text-muted: #4b5e7a;
+  --text-accent: #4f9cf9;
+
+  /* Risk colors */
+  --risk-critical: #ef4444;
+  --risk-high: #f97316;
+  --risk-medium: #eab308;
+  --risk-low: #22c55e;
+  --risk-none: #4b5e7a;
+
+  /* Status */
+  --status-new: #a855f7;
+  --status-modified: #f97316;
+  --status-unchanged: #4b5e7a;
+
+  /* Node type colors */
+  --node-service: #4f9cf9;
+  --node-external: #a855f7;
+  --node-database: #22c55e;
+  --node-mobile: #f97316;
+  --node-scheduler: #eab308;
+
+  /* Edge colors */
+  --edge-call: #4f9cf9;
+  --edge-data: #64748b;
+  --edge-event: #a855f7;
+  --edge-schedule: #94a3b8;
+
+  /* Spacing */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 20px;
+  --sp-6: 24px;
+
+  /* Typography */
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+
+  /* Transitions */
+  --transition-fast: 120ms ease;
+  --transition-default: 200ms ease;
+
+  /* Panel widths */
+  --panel-left-width: 280px;
+  --panel-right-width: 320px;
+}
